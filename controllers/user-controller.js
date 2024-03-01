@@ -1,7 +1,7 @@
 import User from "../model/User";
 
-const getAllUser = async (req, res, next) => {
-    var users;
+export const getAllUser = async (req, res, next) => {
+    let users;
     try {
         users = await User.find();
     } catch (err) {
@@ -12,4 +12,7 @@ const getAllUser = async (req, res, next) => {
             message: "No Users Found"
         });
     }
+    return res.status(200).json({
+        users
+    });
 }
