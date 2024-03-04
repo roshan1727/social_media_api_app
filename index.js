@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from 'mongoose';
-import router from "../SOCIAL MEDIA API APP/routes/user-routes";
+import router from "./routes/user-routes";
 
 const app = express();
 const port = 5000;
