@@ -1,6 +1,6 @@
-import User from "../model/User";
+const User = require("../model/User");
 
-export const getAllUser = async (req, res, next) => {
+exports.getAllUser = async (req, res, next) => {
     let users;
     try {
         users = await User.find();
@@ -18,7 +18,7 @@ export const getAllUser = async (req, res, next) => {
 };
 
 
-export const singup = async (req, res, next) => {
+exports.singup = async (req, res, next) => {
     const {
         name,
         email,

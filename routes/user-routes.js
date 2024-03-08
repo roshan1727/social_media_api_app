@@ -1,11 +1,11 @@
-import express from 'express';
-import {
+const express = require('express');
+const {
     getAllUser,
     singup
-} from '../controllers/user-controller';
+} = require('../controllers/user-controller');
 
 const router = express.Router();
 router.get("/", getAllUser);
 router.post("/singup", singup);
 
-export default router;
+module.exports = router;
